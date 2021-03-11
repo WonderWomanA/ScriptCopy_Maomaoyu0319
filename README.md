@@ -1,2 +1,2 @@
 # Personal
-如有需要，请同步到自己的库使用，谢谢
+See U Later
