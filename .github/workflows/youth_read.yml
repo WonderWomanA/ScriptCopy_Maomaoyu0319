@@ -20,7 +20,6 @@ jobs:
       YOUTH_READ4: ${{ secrets.YOUTH_READ4 }}
       YOUTH_READ5: ${{ secrets.YOUTH_READ5 }}
       YOUTH_READ6: ${{ secrets.YOUTH_READ6 }}
-      YOUTH_READ7: ${{ secrets.YOUTH_READ7 }}
       TZ: Asia/shanghai
     steps:
       - name: Checkout
@@ -80,11 +79,3 @@ jobs:
         env:
           YOUTH_READ: ${{ secrets.YOUTH_READ6 }}
           YOUTH_ATIME: ${{ secrets.YOUTH_ATIME6 }}
-
-      - name: '运行 【中青看点自动阅读七】'
-        if: env.YOUTH_READ7
-        run: |
-          node Task/Youth_Read.js
-        env:
-          YOUTH_READ: ${{ secrets.YOUTH_READ7 }}
-          YOUTH_ATIME: ${{ secrets.YOUTH_ATIME7 }}
